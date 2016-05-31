@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Airports in the world</title>
+    <!--Bootstrap-->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">  
+    <style type="text/css">
+      body { background: #426E86; } /*#232122,*/
+      h1,h3 {color: aliceblue;}
+    </style>
+    <script type="text/javascript" src="myAirports.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["map"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable(airports);
+        var options = {showTip: true,zoomLevel: 6  };
+        var map = new google.visualization.Map(document.getElementById('map_div'));
+        map.draw(data, options);
+      }
+    </script>
+  </head>
+  
+  <body>
+    <div class="container">
+           <center><h1 id="myHeader">Airports in the world</h1> </center>
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="map_div" class="img-rounded img-responsive">
+          </div>
+        </div>
+      </div>
+
+         <h3 id='myNumber'>Number of Airports:</h3>
+         <script type="text/javascript">
+          document.getElementById('myHeader').innerHTML = 'Airports in ' + cname;
+          document.getElementById('myNumber').innerHTML = 'Number of Airports: ' + airports.length;
+        </script>
+    </div>
+  </body>
+</html>
