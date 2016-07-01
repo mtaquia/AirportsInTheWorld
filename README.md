@@ -17,3 +17,4 @@ This small project concerns about drawing all airports and heliports from a choo
 
 4. If you wish to generate other graphic just rerun **_myCountry.py_** and refresh the browser.
 
+![Example of airport](airportsexample.png)
