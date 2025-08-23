@@ -5,6 +5,7 @@ import urllib
 
 initial = time.time()
 my_password = abc22!!!ereau
+my_api_key = AABBB12CCDDEEFF
 print 'Starting the program ...\n\n'
 print 'Downloading airports.csv from the Internet\n'
 fhand = urllib.urlopen('http://ourairports.com/data/airports.csv')
