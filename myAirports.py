@@ -4,10 +4,6 @@ import time
 import urllib
 
 initial = time.time()
-my_password = abc22!!!ereau
-my_api_key = AABBB12CCDDEEFF
-aws_secret_access_key = AKIAZBXJMOBYJOV5HNOJ
-aws_secret_key = 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
 print 'Starting the program ...\n\n'
 print 'Downloading airports.csv from the Internet\n'
 fhand = urllib.urlopen('http://ourairports.com/data/airports.csv')
